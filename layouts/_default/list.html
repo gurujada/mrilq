@@ -1,0 +1,308 @@
+{{ define "main" }}
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="/index.html"><img src="/images/MrilQ.png" alt="" class="img-fluid"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item dropdown">
+
+                <a href="#" class="nav-link ">Skin & Hair </a><i
+                    class="d-md-none indicator-mobile fa fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <div class="container nav-dropdown-items">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <h5 class="">Shop By Collection</h5>
+                                        <ul class="nav flex-column ">
+                                            <li class="nav-item">
+                                                <a href="/duskcare" class="nav-link">Dusk Care</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/dawncare" class="nav-link">Dawn Care</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/bodycare" class="nav-link">Body Care</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/haircare" class="nav-link">Hair Care</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/ultrarange" class="nav-link">Ultra
+                                                    Range</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <ul class="nav flex-column">
+                                            <h5 class="">Shop By Type</h5>
+                                            <h6>Skin :</h6>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Dry Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Normal Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Oily Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Combination Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Mature Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Sensitive Skin</a>
+                                            </li>
+                                            <h6>Hair :</h6>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Greasy</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Oily</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Dry</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Frizzy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <ul class="nav flex-column">
+                                            <h5 class="">Shop By Concern</h5>
+                                            <h6>Skin :</h6>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="#">Lines / Wrinkles</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Acne / Blemishes</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Dark Spots / Uneven Skin Tone</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Dryness / Hydration</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Lack of Radiance</a>
+                                            </li>
+                                            <h6>Hair :</h6>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Oil Control</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Balding</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Thin</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul class="nav flex-column">
+                                            <h5>More Ways to Shop</h5>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">For Children</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">For Teen</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/more-ways-to-shop/mens">For Men</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">For Women</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">For Spas</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Pure Oils</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#"> Intimate Care</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <h5 class="text-center">Best Sellers</h5>
+                                        <div id="nav-carousel" class="carousel slide carousel-fade "
+                                            data-ride="carousel" data-interval="5000">
+                                            <div class="carousel-inner text-center">
+                                                <div class="carousel-item active ">
+                                                    <div class="row">
+                                                        <div class="col-12 mx-auto ">
+                                                            <a href=""><img src="/images/bestsellers/UL.jpg" />
+                                                                <h5>Ultra Lite</h5>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-12 mx-auto ">
+                                                            <a href=""><img src="/images/bestsellers/RL.jpg" />
+                                                                <h5>RL</h5>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-12 mx-auto ">
+                                                            <a href=""><img src="/images/bestsellers/UHSerum.jpg" />
+                                                                <h5>UH Serum</h5>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#nav-carousel" role="button"
+                                                data-slide="prev">
+                                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#nav-carousel" role="button"
+                                                data-slide="next">
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+
+
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Kits</a>
+                <div class="dropdown-content">
+                    <div class="container nav-dropdown-items">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="/images/womenspa.jpg" width="250px" height="250px" />
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <ul class="nav flex-column">
+                                            <h5 class="">Kits For Her</h5>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/maintainherskin">Maintaining Her
+                                                    Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/maintainherskin">Maintaining Her
+                                                    Hair</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/heracne">Her Acne Cure</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/kits/her-hyperpigmentation">Her
+                                                    Hyperpigmentation</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/maintainherskin">Her Beauty
+                                                    Concerns</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/maintainherskin">Bridal Kit</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="/images/manspa.jpg" width="250px" height="250px" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="nav flex-column">
+                                            <h5>Kits For Him</h5>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/his">Maintaining His
+                                                    Skin</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/his">Maintaining His
+                                                    Hair</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/his">His Acne Cure</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/his">His
+                                                    Hyperpigmentation</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/his">His Beauty
+                                                    Concerns</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="nav-item ">
+                <a href="/whymrilq" class="nav-link ">
+                    Why MrilQ?
+                </a>
+
+            </li>
+            <li class="nav-item ">
+                <a href="/faq" class="nav-link" role="button">
+                    Intimate FAQ's
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="/workshops" class="nav-link" role="button">
+                    Workshops
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link ">
+                    About
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a href="/lymphotology" class="nav-link">Lymphotology</a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+{{ .Content }}
+</div>
+{{ end }}

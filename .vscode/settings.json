@@ -1,0 +1,33 @@
+{
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 20,
+  "editor.fontSize": 14,
+  "editor.letterSpacing": 0.2,
+  "editor.fontWeight": "400",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  "editor.autoIndent": "keep",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "solargraph.autoformat": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "files.associations": {
+    "*.erb": "erb",
+    "Gemfile": "ruby"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "emmet.includeLanguages": {
+    "html": "html",
+    "html.erb": "html",
+    "erb": "html"
+  },
+}

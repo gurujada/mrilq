@@ -1,0 +1,39 @@
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
+{{ $style := resources.Get "scss/main.scss" | toCSS $options | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity={{ $style.Data.Integrity }}>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Gurujada">
+<meta name="description"
+    content=" The name MrilQ is derived from the word Mrinal meaning Lotus, which even while growing in the swamps, retains its amazing radiance, beauty and freshness. " />
+<meta property="og:url" content="http://www.mrilq.com" />
+<meta name="google-site-verification" content="VgNqhA-dJPi5OTeHp2I2-lrXjdLJlXPVoI9Gk4C_ea0" />
+<meta property="og:title" content=" MrilQ " />
+<meta property="og:description"
+    content=" The name MrilQ is derived from the word Mrinal meaning Lotus, which even while growing in the swamps, retains its amazing radiance, beauty and freshness. " />
+<meta property="og:site_name" content="MrilQ" />
+<meta property="og:image" content="http://www.mrilq.com/images/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" MrilQ ">
+<meta name="twitter:description"
+    content=" The name MrilQ is derived from the word Mrinal meaning Lotus, which even while growing in the swamps, retains its amazing radiance, beauty and freshness. ">
+<meta name="twitter:image" content="http://www.mrilq.com/images/logo.png">
+
+<link rel="icon" href="/images/favicon.png" sizes="62x62" type="image/png">
+
+<title>MrilQ</title>
+<link rel="stylesheet" href="/css/bootstrap4beta.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/interactive.css">
+<link href="/css/sweetalert.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+<link rel="icon" href="/images/favicon.png" sizes="62x62" type="image/png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

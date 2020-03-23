@@ -1,0 +1,398 @@
+{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+{{ $popperjs := resources.Get "js/vendor/popper.min.js" }}
+{{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+{{ $js := slice $jquery $popperjs $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+
+<script src="{{$js.RelPermalink}}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="/js/bioep.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
+<script src="/js/googleplace.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBg2557Oz7mSzW7I8Ryjgt9l8S76UMKxxw&signed_in=true&libraries=places">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $("#google-reviews").googlePlaces({
+            placeId: 'ChIJTZ6x4XKTyzsRv6owbgJBohM',
+            render: ['reviews'],
+            min_rating: 4.3,
+            max_rows: 6
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    $(window).resize(function () {
+        $("#carouselExampleIndicators ol").animate({
+            'left': '0'
+        });
+        $("#before-after ol").animate({
+            'left': '0'
+        });
+
+
+        $("#quote ol").animate({
+            'left': '0'
+        });
+
+
+        $("#nav-carousel ol").animate({
+            'left': '0'
+        });
+
+
+
+    });
+
+    $(document).ready(function () {
+        $(window).ready(function () {});
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $(".navbar").css("background-color", "#fff");
+            } else {
+                $(".navbar").css("background-color", "transparent");
+            }
+        });
+
+        var $videoSrc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $(".open").click(function () {
+            var container = $(this).parents(".topic");
+            var answer = container.find(".answer");
+            var trigger = container.find(".faq-t");
+
+            answer.slideToggle(200);
+
+            if (trigger.hasClass("faq-o")) {
+                trigger.removeClass("faq-o");
+            } else {
+                trigger.addClass("faq-o");
+            }
+
+            if (container.hasClass("expanded")) {
+                container.removeClass("expanded");
+            } else {
+                container.addClass("expanded");
+            }
+        });
+
+
+        $('#testimonial').on('hide.bs.modal', function (e) {
+
+            $("#video").attr('src', $videoSrc);
+        })
+
+        bioEp.init({
+            html: '<div id="bio_ep_content">' +
+                '<div class="row ">' +
+                '<div class="col-9 m-t-50 mx-auto text-center">' +
+                '<span class="m-t-50">Unlock The Power Of Natural Ingredients To Heal Your Body,  Maintain Flawless Skin/Hair and Achieve Optimal Beauty </span>' +
+                '<span class="m-t-30">Sign up now to <b>get the Birthday Bonanza Offer.</b>, Enter your Birthdate and avail 10% off on your purchase of MrilQ on your special day.' +
+                'You also get FREE tips from Muashumi herself with the "Everyday routine to beautiful skin and hair" Mini-Series mail ' +
+                'sent directly to your inbox. Happy Eid and a happier World Environment Day</span>' +
+                '<form name="submit-tips-to-google-sheet" class="m-t-30">' +
+                '<div class="input-group mt-4">' +
+
+                '<input name="email" type="email" id="email" class="form-control" placeholder="Your E-Mail..." required>' +
+                '<input name="name" type="text" id="name" class="form-control" placeholder="Your Name..." required>' +
+                '<input name="birthday" type="text" id="birthdate" class="form-control" placeholder="Birthday..." required>' +
+                '<span class="input-group-btn">' +
+                '<button class="btn  btn-danger" type="submit"  >Sign Up</button>' +
+                '</span>' +
+
+                '</div>' +
+                '</form>' +
+                '<div class="m-b-30">' +
+                '<small >You will also get beauty inspirations right in your inbox!</small>' +
+                '</div>' +
+                '</div>' +
+
+                '</div>' +
+
+                '</div>',
+            css: '#bio_ep {width: 600px; height: 630px; color: #333; background-image: url("/images/popup.jpg"); text-align: center;}' +
+                '#bio_ep_content .col-9 {padding: 3%; background-color:#fff; font-family: "Inconsolata";}' +
+                '#bio_ep_content span:nth-child(1) {display: block; color: #000; line-height:35px; font-size: 32px; font-weight: 800;}' +
+                '#bio_ep_content span:nth-child(2) {display: block; font-size: 16px; padding-left:5px;}' +
+                '#bio_ep_content span:nth-child(2) h6 {color:#99CC33}' +
+                '#bio_ep_content span:nth-child(4) {display: block; margin: -5px 0 0 0; font-size: 16px; font-weight: 600;}' +
+                '#bio_ep_content form  {margin-left:3%; margin-right:3%;}' +
+                '#bio_ep_content form button {background-color:#039021; border-color:#039021; }',
+            fonts: ['//fonts.googleapis.com/css?family=Inconsolata']
+        });
+
+
+        const scriptTipsURL =
+            'https://script.google.com/macros/s/AKfycbzLTawonZ3dEnqSmHiu7JnWURAheHgT_azaWh1FnDxk7hYQBTM/exec'
+        const tipform = document.forms['submit-tips-to-google-sheet']
+
+        tipform.addEventListener('submit', e => {
+            e.preventDefault()
+            swal("Success", "Thanks For Subscribing!", "success")
+
+            fetch(scriptTipsURL, {
+                    method: 'POST',
+                    body: new FormData(tipform)
+                })
+
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+
+        })
+
+
+
+
+    });
+    $("#birthday").flatpickr;
+    flatpickr("#birthday", {});
+    flatpickr("#birthdate", {});
+</script>
+
+
+
+<script type="text/javascript">
+    ;
+    var ASPath = '/modules/pm_advancedsearch4/';
+    var ASSearchUrl = 'https://www.indemne.uk/module/pm_advancedsearch4/advancedsearch4';
+    var CUSTOMIZE_TEXTFIELD = 1;
+    var FancyboxI18nClose = 'Close';
+    var FancyboxI18nNext = 'Next';
+    var FancyboxI18nPrev = 'Previous';
+    var ajax_allowed = true;
+    var ajaxsearch = true;
+    var as4_orderBySalesAsc = 'Meilleures ventes en dernier';
+    var as4_orderBySalesDesc = 'Meilleures ventes en premier';
+    var baseDir = 'https://www.indemne.uk/';
+    var baseUri = 'https://www.indemne.uk/';
+    var blocksearch_type = 'top';
+    var contentOnly = false;
+    var currency = {
+        "id": 3,
+        "name": "Pound",
+        "iso_code": "GBP",
+        "iso_code_num": "826",
+        "sign": "\u00a3",
+        "blank": "1",
+        "conversion_rate": "0.892400",
+        "deleted": "0",
+        "format": "1",
+        "decimals": "1",
+        "active": "0",
+        "prefix": "\u00a3 ",
+        "suffix": "",
+        "id_shop_list": null,
+        "force_id": false
+    };
+    var currencyBlank = 1;
+    var currencyFormat = 1;
+    var currencyRate = 1;
+    var currencySign = '£';
+    var customizationIdMessage = 'Customization #';
+    var delete_txt = 'Delete';
+    var displayList = false;
+    var freeProductTranslation = 'Free!';
+    var freeShippingTranslation = 'Free shipping!';
+    var generated_date = 1525074205;
+    var hasDeliveryAddress = false;
+    var highDPI = false;
+    var id_lang = 2;
+    var img_dir = 'https://www.indemne.uk/themes/indemne/img/';
+    var instantsearch = false;
+    var isGuest = 0;
+    var isLogged = 0;
+    var isMobile = false;
+    var page_name = 'module-interactivestepsearch-default';
+    var placeholder_blocknewsletter = 'Enter your e-mail';
+    var priceDisplayMethod = 0;
+    var priceDisplayPrecision = 2;
+    var quickView = false;
+    var removingLinkText = 'remove this product from my cart';
+    var roundMode = 2;
+    var search_url = 'https://www.indemne.uk/recherche';
+    var static_token = '9f1fc521d44d3a8440ec43fee64a746c';
+    var toBeDetermined = 'To be determined';
+    var token = '9e3f861ffebfbe688035eb30c9af98eb';
+    var usingSecureMode = true;
+</script>
+
+<script type="text/javascript">
+    ;
+
+    if (typeof kiwik === 'undefined')
+        kiwik = {};
+    if (typeof kiwik.interactivestepsearch === 'undefined')
+        kiwik.interactivestepsearch = {};
+    kiwik.interactivestepsearch.MAX_STEPS = 3;
+    kiwik.interactivestepsearch.current_step = 1;
+    $(function () {
+        $('body').on('click', '.category-tooltip', function () {
+            $.fancybox({
+                type: 'iframe',
+                href: $(this).find('a').attr('href')
+            });
+            return false;
+        });
+        $('body').on('click', '.wrapper-category', function () {
+            var step = parseInt($(this).attr('data-step'), 10);
+            var id_category = parseInt($(this).attr('data-id_category'), 10);
+            var category_name = $(this).find('.category-name').text();
+            category_name = category_name.replace($(this).find('.category-subtitle').text(), '');
+
+            kiwik.interactivestepsearch.displayNextStep(step, id_category, category_name);
+            return false;
+        });
+        $('body').on('click', '.sentence-answer', function () {
+            var step = parseInt($(this).attr('data-step'), 10);
+            if (step == 1) {
+                $('#middle_image_after_first_step').css('background-image', '');
+            }
+            kiwik.interactivestepsearch.displayEditStep(step);
+            return false;
+        });
+        $('.button-redo-test a').click(function () {
+            $('#sentence-answer-1').click();
+            $.scrollTo($('#top_diag').offset().top - 50, 500);
+            return false;
+        });
+    });
+    kiwik.interactivestepsearch.setActiveSentence = function (step) {
+        $('#interactive-scene').show();
+        $('#sentence-step-' + step).show();
+        $('#sentence-answer-' + step).text('...').show().removeClass('answered');
+        for (var i = step + 1; i <= kiwik.interactivestepsearch.MAX_STEPS; i++) {
+            $('#sentence-step-' + i).hide();
+            $('#sentence-answer-' + i).hide().removeClass('answered');
+        }
+    }
+    kiwik.interactivestepsearch.animateToStep = function (step, id_parent, duration) {
+        var duration = duration === undefined ? 300 : duration;
+        $('#main-sentence').attr('data-step', step);
+        $('#interactive-scene').css('height', $('#interactive-scene').height());
+        $('.wrapper-category').fadeOut(duration);
+        setTimeout(function () {
+            $('#interactive-scene').attr('data-step', step);
+            $('.wrapper-category[data-id_parent="' + id_parent + '"]').fadeIn(duration);
+            $('#interactive-scene').css('height', false);
+        }, duration);
+
+
+    }
+    kiwik.interactivestepsearch.displayNextStep = function (current_step, id_category, category_name) {
+        $('#sentence-step-' + (current_step)).show();
+        $('#sentence-answer-' + (current_step)).text(category_name).show().addClass('answered').attr(
+            'data-id_category', id_category);
+        kiwik.interactivestepsearch.setActiveSentence(current_step + 1);
+        if (current_step + 1 > kiwik.interactivestepsearch.MAX_STEPS) {
+            $('#main-sentence').attr('data-step', current_step + 1);
+
+        } else {
+            kiwik.interactivestepsearch.animateToStep(current_step + 1, id_category);
+            kiwik.interactivestepsearch.current_step = current_step + 1;
+        }
+    }
+    kiwik.interactivestepsearch.displayEditStep = function (target_step) {
+        if (target_step == kiwik.interactivestepsearch.current_step && target_step == 1) {
+            return;
+        }
+        kiwik.interactivestepsearch.setActiveSentence(target_step);
+        var id_category = $('#sentence-answer-' + target_step).attr('data-id_category');
+        var id_parent = $('.wrapper-category[data-id_category="' + id_category + '"]').attr('data-id_parent');
+        kiwik.interactivestepsearch.animateToStep(target_step, id_parent, 0);
+        kiwik.interactivestepsearch.current_step = target_step;
+    }
+
+
+
+
+    var drawCircle = function (R, r, c) {
+
+        var step = (2 * Math.PI) / c;
+        var coords = [];
+        var origin = {
+            x: window.innerWidth / 1.5,
+            y: window.innerHeight / 2.3
+        };
+        for (var i = 0; i < c; i++) {
+            var angle = i * step;
+            coords.push({
+                cx: origin.x + Math.cos(angle) * R,
+                cy: origin.y + Math.sin(angle) * R
+            });
+        }
+        return coords;
+    }
+
+
+
+    var elements = $('.roundedCircle');
+    var circlesCoords = drawCircle(150, 120, elements.length);
+    elements.each(function (index, el) {
+        console.log(circlesCoords[index].cx);
+        $(this).css('left', circlesCoords[index].cx + 'px')
+            .css('top', circlesCoords[index].cy + 'px');
+    });
+</script>
+
+<script>
+    const scriptURL =
+        'https://script.google.com/macros/s/AKfycbyHvJQ3AtEm2CTv2wMddu0G7xQSDW0KHK_z9NAHFLGIlYpFINk/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        swal("Success", "Thanks For Subscribing!", "success")
+
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+
+    })
+</script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-120864084-1', 'auto');
+    ga('send', 'pageview');
+</script>

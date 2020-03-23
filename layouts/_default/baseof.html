@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{ partial "head.html" . }}
+  <meta charset="utf-8">
+  <title>{{ block "title" . }}
+    Mrilq
+    {{ .Site.Title }}
+    {{ end }}</title>
+</head>
+
+<body class="home-body">
+  
+  <!-- Code that all your templates share, like a header -->
+  {{ block "main" . }}
+  <!-- The part of the page that begins to differ between templates -->
+  {{ end }}
+  {{ partial "js.html" . }}
+</body>
+
+</html>
