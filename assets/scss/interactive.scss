@@ -1,0 +1,420 @@
+#result_wrapper_no_result {
+  display: none
+}
+
+#result_wrapper {
+  display: none
+}
+
+#result_loader {
+  display: none;
+  text-align: center;
+  margin: 15px 0 30px 0
+}
+
+#main-sentence {
+  text-align: center;
+  padding: 20px 0 15px 0
+}
+
+#main-sentence[data-step='1'] {
+  font-size: 48px
+}
+
+#main-sentence .sentence-bit {
+  color: #039021;
+  line-height: 50px;
+  margin: 5px 2px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+#interactive-scene {
+  position: relative;
+  height: 415px;
+  max-width: 1140px;
+  background-image: url("https://www.indemne.uk/modules/interactivestepsearch/views/css/../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-bottom: 50px
+}
+
+#interactive-scene[data-step='1'] .wrapper-category .category-name {
+  font-size: 24px;
+  line-height: 26px;
+  background-color: #039021;
+  box-shadow: none;
+  color: #fff;
+  padding: 12px 38px;
+  margin: 0;
+  cursor: pointer;
+  text-align: center
+}
+
+#interactive-scene .wrapper-category {
+  cursor: pointer
+}
+
+#interactive-scene .wrapper-category:hover .category-name {
+  color: #039021;
+  background: #222222
+}
+
+#interactive-scene .wrapper-category .category-name {
+  font-size: 18px;
+  line-height: 15px !important;
+  background-color: #039021;
+  box-shadow: 2px 2px 0 #039021;
+  color: #fff;
+  padding: 10px;
+  margin: 15px 0 !important;
+  cursor: pointer;
+  text-align: center;
+  -moz-transition: ease 0.3s color, ease 0.3s background;
+  -o-transition: ease 0.3s color, ease 0.3s background;
+  -webkit-transition: ease 0.3s color, ease 0.3s background;
+  transition: ease 0.3s color, ease 0.3s background
+}
+
+#interactive-scene .wrapper-category .category-name:hover {
+  color: #039021;
+  background: #222222
+}
+
+#interactive-scene .wrapper-category .category-name .category-subtitle {
+  display: block;
+  font-size: 14px;
+  line-height: 14px
+}
+
+#interactive-scene #middle_image_after_first_step {
+  height: 100%;
+  width: 100%;
+  background-position: center top;
+  background-repeat: no-repeat
+}
+
+#result_wrapper #products_wrapper {
+  margin-top: 40px
+}
+
+.result-title {
+  font-family: "Gothic", "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  line-height: normal;
+  padding-bottom: 6px;
+  color: #222222;
+  text-transform: uppercase;
+  margin-top: 25px
+}
+
+.result-subtitle {
+  text-align: center;
+  color: #039021;
+  font-family: "Sign", "Open Sans", sans-serif;
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 30px
+}
+
+.result-subtitle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e1e1e1;
+  z-index: 8
+}
+
+.result-subtitle span {
+  padding: 0 15px;
+  background: #fff;
+  position: relative;
+  z-index: 9
+}
+
+.button-redo-test {
+  text-align: center;
+  margin: 5px 0 30px 0
+}
+
+.button-redo-test a {
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  line-height: 26px;
+  background-color: #d9e96a;
+  box-shadow: 2px 2px 0 #d9e96a;
+  color: #666666;
+  padding: 7px 45px;
+  margin: 80px 0 !important;
+  cursor: pointer;
+  text-align: center;
+  -moz-transition: ease 0.3s color;
+  -o-transition: ease 0.3s color;
+  -webkit-transition: ease 0.3s color;
+  transition: ease 0.3s color
+}
+
+.button-redo-test a:hover {
+  color: #666666;
+  background: #e1e1e1;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 #e1e1e1;
+}
+
+#main-sentence .sentence-bit.sentence-answer.answered {
+  position: relative;
+  background-color: #039021;
+  box-shadow: 2px 2px 0 #039021;
+  color: #fff;
+  padding: 10px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#main-sentence .sentence-bit {
+  color: #039021;
+  line-height: 50px;
+  margin: 5px 2px;
+  display: inline-block;
+}
+
+#main-sentence .sentence-bit.sentence-answer.answered:hover:after {
+  background-color: #222222;
+}
+
+#main-sentence .sentence-bit.sentence-answer.answered:after {
+  content: '';
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  height: 18px;
+  width: 18px;
+  font-size: 15px;
+  line-height: 15px;
+  box-shadow: 2px 2px 0 #039021;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background: #039021 url(https://www.indemne.uk/modules/interactivestepsearch/views/css/../img/picto_close_skin.png) center center no-repeat;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+
+
+@media (min-width:768px) {
+  #interactive-scene[data-step="1"] .wrapper-category .category-name {
+    z-index: 20;
+    width: 200px;
+    position: absolute;
+    bottom: -15px;
+    font-size: 24px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category .category-image {
+    z-index: 10;
+    height: 415px;
+    position: absolute;
+    top: 0
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="1"] .category-name {
+    left: 175px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="1"] .category-image {
+    left: 50px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="2"] .category-name {
+    right: 175px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="2"] .category-image {
+    right: 50px;
+    z-index: 9
+  }
+
+  #interactive-scene[data-step="1"] .category-name {
+    width: 200px;
+    position: absolute;
+    bottom: -10px;
+    font-size: 24px
+  }
+
+  #interactive-scene[data-step="1"] .category-image {
+    height: 415px;
+    position: absolute;
+    top: 0
+  }
+}
+
+@media (max-width:1199px) {
+  #main-sentence {
+    padding: 15px 0 5px 0
+  }
+
+  #main-sentence .sentence-bit {
+    margin: 8px 2px
+  }
+
+  #main-sentence[data-step='1'] {
+    font-size: 32px
+  }
+}
+
+@media (max-width:991px) {
+  #interactive-scene {
+    height: 260px
+  }
+
+  #interactive-scene[data-step="1"] .category-image {
+    height: 260px !important
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="1"] .category-name {
+    left: 100px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category[data-position="2"] .category-name {
+    right: 100px
+  }
+
+  #interactive-scene[data-step="1"] .category-name {
+    width: 200px;
+    position: absolute;
+    bottom: -10px;
+    font-size: 24px
+  }
+
+  #main-sentence {
+    padding: 15px 0 10px 0
+  }
+
+  #main-sentence[data-step='1'] {
+    font-size: 38px
+  }
+}
+
+@media (max-width:767px) {
+  #interactive-scene {
+    height: auto;
+    background-image: none
+  }
+
+  #interactive-scene .category-image {
+    display: none
+  }
+
+  #interactive-scene #middle_image_after_first_step {
+    display: none !important
+  }
+
+  #interactive-scene[data-step="1"] .category-image {
+    height: 260px !important
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category {
+    margin-bottom: 10px
+  }
+
+  #interactive-scene[data-step="1"] .wrapper-category .category-name {
+    width: 100%;
+    position: inherit;
+    bottom: auto;
+    font-size: 20px;
+    padding: 8px 25px
+  }
+
+  #main-sentence .sentence-bit {
+    line-height: 25px !important
+  }
+
+  #main-sentence[data-step='1'] {
+    font-size: 28px
+  }
+
+  .result-title {
+    font-size: 16px;
+    padding-bottom: 6px;
+    margin-top: 25px
+  }
+
+  .result-subtitle {
+    font-size: 26px;
+    margin-bottom: 30px
+  }
+
+  .result-subtitle:before {
+    top: 50%
+  }
+}
+
+@media (max-width:479px) {
+  #interactive-scene {
+    margin-bottom: 30px
+  }
+
+  #main-sentence {
+    padding: 5px
+  }
+
+  #main-sentence .sentence-bit {
+    line-height: 25px !important;
+    margin: 4px 4px
+  }
+
+  #main-sentence[data-step='1'] {
+    font-size: 24px
+  }
+
+  .result-title {
+    font-size: 16px;
+    padding-bottom: 6px;
+    margin-top: 25px
+  }
+
+  .result-subtitle {
+    font-size: 26px;
+    margin-bottom: 30px
+  }
+
+  .result-subtitle:before {
+    top: 50%
+  }
+
+  .button-redo-test {
+    margin: 5px 0 20px 0
+  }
+
+  .button-redo-test a {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 5px 30px;
+    margin: 2px 0
+  }
+}
+
+
+@media (min-width: 768px) {
+  #interactive-scene[data-step="2"] .wrapper-category .category-image {
+    border-radius: 5000px;
+    width: 90px;
+    height: 90px;
+    border: 5px solid white;
+    position: absolute;
+    top: 8px;
+  }
+
+  #interactive-scene[data-step="2"] .wrapper-category .category-name-inner {
+    padding: 18px;
+  }
+}
